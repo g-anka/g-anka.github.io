@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-btn">
+        <button id="start" class="starter-btn">
+            CLICK
+        </button>
+    </div>
+
+    <div>
+        <div class="container-gif">
+            <img id="myGif" class="img-gif" src="https://i.gifer.com/3OTLX.gif"/>
+            <a href="https://onetimesecret.com/private/2bfz1f9jpw8ulow4kvq8y5fonmgtl5r" target="_blank">
+                <button class="gif-click-zone"></button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="audio-control">
+        <audio id="player" loop>
+            <source src="src/short-beyond-the-senses.mp3" type="audio/mp3">
+        </audio>
+    </div>
+</body>
+<script>
+   const gifCard = document.getElementById('myGif');
+   const btn = document.getElementById('start');
+
+   btn.addEventListener('click', handleButtonClick);
+
+    function handleButtonClick() {
+        gifCard.scrollIntoView({block: "center", behavior: "smooth"});
+        console.log("yes")
+
+        document.getElementById('player').play();
+        console.log("plays")
+    }
+
+    function funcOnload() {
+        document.body.scrollIntoView({block: "start", inline: "nearest"})
+        console.log("onloaded")
+    }
+
+    window.onload = funcOnload;
+</script>
+</html>
